@@ -1,0 +1,16 @@
+<script>
+    document.getElementById("getStartedBtn").addEventListener("click", function () {
+
+        // Show all menus
+        const menuGroup = document.getElementById("menuGroup");
+        menuGroup.classList.remove("d-none");
+
+        // Smooth scroll to navbar
+        document.querySelector("nav").scrollIntoView({ behavior: "smooth" });
+
+        // Open Personal Info dropdown automatically
+        const firstMenu = menuGroup.querySelector('[data-bs-toggle="dropdown"]');
+        const dropdown = new bootstrap.Dropdown(firstMenu);
+        dropdown.show();
+    });
+</script>
